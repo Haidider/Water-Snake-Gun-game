@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ <title>Enter Number to win a prize</title>
+   <head><style>
+       
+       
+       body{
+           background-color:#d0ff005b;
+       }
+       button{position:relative;
+       left:100px;
+           border-radius:30px;
+           background-color: #55ffaca6;
+           border:1px solid black;
+           margin-top:50px;
+           padding: 20px;
+           width: 50%;
+           font:40px solid black;
+           
+           
+       }
+       p{
+           
+           
+           font: 25px solid ;
+           color:#ff5f00cc;
+       }
+       b{
+           color:black;
+       }
+       
+       nav{position:relative;
+       top:-8px;
+       left:-02%;
+           background-color:#ff4a00d2;
+           color:white;
+           justify-content:space around;
+           display:flex;
+           padding:29px;
+           width:356px;
+       }
+   </style>
+    
+    
+    
+</head>
+<body>
+    
+    
+    
+    <nav>Haddi Quiz.com</nav>
+<body>
+    
+    <p>
+        <u>
+       Rules :-<br><br>
+      <b> 1. </b>   You have To choose One character from water,gun and snake<br><br>
+         <b> 2. </b>  A competition will held between your character and a random one from  mentioned characters. <br><br>
+         <b> 3.</b> </b><br><br> <b>a. </b>Snake will win after its competiton will be with water and itself.<br>
+         <br><b>b. </b> Gun will win if its competition will be with snake and itself<br>
+         <br><b>c.  </b> Water will win if its competition will be with gun and itself.
+        
+        
+    </p>
+    </u>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+<button onclick="start()" id="btn">Start</button>
+ <br><br><br><br><br><br><br><br><br>
+    
+    <script>
+        
+      function start(){
+        
+        function rnd(max){
+    return Math.floor(Math.random()*max)
+}
+let again = true
+let obj1=[]
+let obj2 = []
+let tries = obj2.length
+let rndm =rnd(3)
+do{
+
+let c = prompt("Enter 1 character water , gun or snake")
+c = c.toLowerCase()
+tries = obj2.push(c)
+document.write(`your caracter was ${c}<br>`)
+if(c=='snake'){
+
+  if(rndm==0 || rndm==1){
+  
+     obj1.push(1)
+     document.write('snake win', '<br>') 
+     }
+     else{
+    document.write('snake loose','<br>')
+}
+
+   }
+   
+   
+   
+   
+  else if(c=='water'){
+
+  if(rndm==0 || rndm==2){
+  
+     obj1.push(1)
+     document.write('water win','<br>') 
+     }
+     else{
+    document.write('water loose','<br>')
+}
+
+   }
+   
+   
+   
+ else {
+
+  if(rndm==2 || rndm==1){
+  
+     obj1.push(1)
+     document.write('gun win','<br>') 
+     }
+     else{
+    document.write('gun loose' , '<br>')
+}
+
+   }
+   
+   
+again = confirm('You want to play again')
+   }while(again)
+ document.write
+ (`you have played ${tries} ${tries >1? 'games':'game'} <br>`)
+
+function sumAll(arr){
+    let sum = 0
+    for(let a of arr)
+    sum += a
+    return sum
+}
+if (rndm==1) {
+    function rndm(x){
+        return "snake"
+    }
+    let snake = rndm()
+ document.write(`You competition was with ${snake}<br>`)
+}
+else  if (rndm==0) {function rndm(x){
+        return "water"
+    }
+    let water = rndm()
+    document.write(`You competition was with ${water}<br>`)
+    
+}
+else {
+    function rndm(x){
+        return "gun"
+    }
+    let gun = rndm()
+    document.write(`Your competition was with ${gun}<br>`)
+}
+
+document.write(`Your score is ${sumAll(obj1)}`)}
+
+       
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+</body>
+</html>
